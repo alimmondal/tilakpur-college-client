@@ -21,12 +21,13 @@ const OurTeachers = () => {
 
     let settings = {
         dots: true,
-        arrows: true,
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 1,
         cssEase: "linear",
-        
+        // className: "center",
+        // centerMode: true,
+        // centerPadding: "60px",
         // speed: 500,
         // autoplay: true,
         // speed: 2000,
@@ -40,113 +41,109 @@ const OurTeachers = () => {
 
 
     return (
-            <div className="boddy pb-5">
-                <div className="container carousel">
-                <h1 className="text-white py-4"> Our Teacher</h1>
-            <Slider {...settings} >
-                <div className="card-wrapper">
-                    <div className="card">
-                        <div className="card-image">
-                            <img src={teacher2} alt="" className="img-fluid"/>
-                        </div>
-                        <ul className="social-icons">
-                            <li><a href="#"><i className="fab fa-facebook "></i> </a></li>
-                            <li><a href="#"><i className="fab fa-instagram"></i> </a></li>
-                            <li><a href="#"><i className="fab fa-twitter"></i> </a></li>
-                            <li><a href="#"><i className="fab fa-linkedin"></i> </a></li>
-                        </ul>
-                        <div className="details">
-                            <h2>John Doe <span className="job-title">UI developer</span> </h2>
-                        </div>
-                    </div>
-                </div>
-                <div className="card-wrapper">
-                <div className="card-wrapper">
-                <div className="card-wrapper">
-                    <div className="card">
-                        <div className="card-image">
-                            <img src={teacher1} alt="" className="img-fluid"/>
-                        </div>
-                        <ul className="social-icons">
-                            <li><a href="#"><i className="fab fa-facebook "></i> </a></li>
-                            <li><a href="#"><i className="fab fa-instagram"></i> </a></li>
-                            <li><a href="#"><i className="fab fa-twitter"></i> </a></li>
-                            <li><a href="#"><i className="fab fa-linkedin"></i> </a></li>
-                        </ul>
-                        <div className="details">
-                            <h2>John Doe <span className="job-title">UI developer</span> </h2>
+        <div className="boddy">
+            <div className="container carousel">
+                <h1 className="text-white py-3"> Our Teacher</h1>
+                <Slider {...settings} >
+                    <div className="card-wrapper">
+                        <div className="card">
+                            <div className="card-image">
+                                <img src={teacher2} alt="" className="img-fluid" />
+                            </div>
+                            <ul className="social-icons">
+                                <li><a href="https://www.facebook.com/shamimarabegum.sonali/"><i className="fab fa-facebook "></i> </a></li>
+                                <li><a href="#"><i className="fab fa-instagram"></i> </a></li>
+                                <li><a href="#"><i className="fab fa-twitter"></i> </a></li>
+                                {/* <li><a href="#"><i className="fab fa-linkedin"></i> </a></li> */}
+                            </ul>
+                            <div className="details">
+                                <h2>John Doe <span className="job-title">UI developer</span> </h2>
+                            </div>
                         </div>
                     </div>
-                </div>
-                </div>
-                </div>
-                <div className="card-wrapper">
-                    <div className="card">
-                        <div className="card-image">
-                            <img src={teacher3} alt="" className="img-fluid"  />
-                        </div>
-                        <ul className="social-icons">
-                            <li><a href="#"><i className="fab fa-facebook "></i> </a></li>
-                            <li><a href="#"><i className="fab fa-instagram"></i> </a></li>
-                            <li><a href="#"><i className="fab fa-twitter"></i> </a></li>
-                            <li><a href="#"><i className="fab fa-linkedin"></i> </a></li>
-                        </ul>
-                        <div className="details">
-                            <h2>John Doe <span className="job-title">UI developer</span> </h2>
+                    <div className="card-wrapper">
+                        <div className="card">
+                            <div className="card-image">
+                                <img src={teacher1} alt="" className="img-fluid" />
+                            </div>
+                            <ul className="social-icons">
+                                <li><a href="#"><i className="fab fa-facebook "></i> </a></li>
+                                <li><a href="#"><i className="fab fa-instagram"></i> </a></li>
+                                <li><a href="#"><i className="fab fa-twitter"></i> </a></li>
+                                {/* <li><a href="#"><i className="fab fa-linkedin"></i> </a></li> */}
+                            </ul>
+                            <div className="details">
+                                <h2>John Doe <span className="job-title">UI developer</span> </h2>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className="card-wrapper">
-                    <div className="card">
-                        <div className="card-image">
-                            <img src={teacher4} alt="" />
-                        </div>
-                        <ul className="social-icons">
-                            <li><a href="#"><i className="fab fa-facebook "></i> </a></li>
-                            <li><a href="#"><i className="fab fa-instagram"></i> </a></li>
-                            <li><a href="#"><i className="fab fa-twitter"></i> </a></li>
-                            <li><a href="#"><i className="fab fa-linkedin"></i> </a></li>
-                        </ul>
-                        <div className="details">
-                            <h2>John Doe <span className="job-title">UI developer</span> </h2>
-                        </div>
-                    </div>
-                </div>
-                <div className="card-wrapper">
-                    <div className="card">
-                        <div className="card-image">
-                            <img src={teacher5} alt="" />
-                        </div>
-                        <ul className="social-icons">
-                            <li><a href="#"><i className="fab fa-facebook "></i> </a></li>
-                            <li><a href="#"><i className="fab fa-instagram"></i> </a></li>
-                            <li><a href="#"><i className="fab fa-twitter"></i> </a></li>
-                            <li><a href="#"><i className="fab fa-linkedin"></i> </a></li>
-                        </ul>
-                        <div className="details">
-                            <h2>John Doe <span className="job-title">UI developer</span> </h2>
+                    <div className="card-wrapper">
+                        <div className="card">
+                            <div className="card-image">
+                                <img src={teacher3} alt="" className="img-fluid" />
+                            </div>
+                            <ul className="social-icons">
+                                <li><a href="#"><i className="fab fa-facebook "></i> </a></li>
+                                <li><a href="#"><i className="fab fa-instagram"></i> </a></li>
+                                <li><a href="#"><i className="fab fa-twitter"></i> </a></li>
+                                {/* <li><a href="#"><i className="fab fa-linkedin"></i> </a></li> */}
+                            </ul>
+                            <div className="details">
+                                <h2>John Doe <span className="job-title">UI developer</span> </h2>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className="card-wrapper">
-                    <div className="card">
-                        <div className="card-image">
-                            <img src={teacher6} alt="" />
-                        </div>
-                        <ul className="social-icons">
-                            <li><a href="#"><i className="fab fa-facebook"></i> </a></li>
-                            <li><a href="#"><i className="fab fa-instagram"></i> </a></li>
-                            <li><a href="#"><i className="fab fa-twitter"></i> </a></li>
-                            <li><a href="#"><i className="fab fa-linkedin"></i> </a></li>
-                        </ul>
-                        <div className="details">
-                            <h2>John Doe <span className="job-title">UI developer</span> </h2>
+                    <div className="card-wrapper">
+                        <div className="card">
+                            <div className="card-image">
+                                <img src={teacher4} alt="" />
+                            </div>
+                            <ul className="social-icons">
+                                <li><a href="#"><i className="fab fa-facebook "></i> </a></li>
+                                <li><a href="#"><i className="fab fa-instagram"></i> </a></li>
+                                <li><a href="#"><i className="fab fa-twitter"></i> </a></li>
+                                {/* <li><a href="#"><i className="fab fa-linkedin"></i> </a></li> */}
+                            </ul>
+                            <div className="details">
+                                <h2>John Doe <span className="job-title">UI developer</span> </h2>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </Slider>
+                    <div className="card-wrapper">
+                        <div className="card">
+                            <div className="card-image">
+                                <img src={teacher5} alt="" />
+                            </div>
+                            <ul className="social-icons">
+                                <li><a href="#"><i className="fab fa-facebook "></i> </a></li>
+                                <li><a href="#"><i className="fab fa-instagram"></i> </a></li>
+                                <li><a href="#"><i className="fab fa-twitter"></i> </a></li>
+                                {/* <li><a href="#"><i className="fab fa-linkedin"></i> </a></li> */}
+                            </ul>
+                            <div className="details">
+                                <h2>John Doe <span className="job-title">UI developer</span> </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="card-wrapper">
+                        <div className="card">
+                            <div className="card-image">
+                                <img src={teacher6} alt="" />
+                            </div>
+                            <ul className="social-icons">
+                                <li><a href="#"><i className="fab fa-facebook"></i> </a></li>
+                                <li><a href="#"><i className="fab fa-instagram"></i> </a></li>
+                                <li><a href="#"><i className="fab fa-twitter"></i> </a></li>
+                                {/* <li><a href="#"><i className="fab fa-linkedin"></i> </a></li> */}
+                            </ul>
+                            <div className="details">
+                                <h2>John Doe <span className="job-title">UI developer</span> </h2>
+                            </div>
+                        </div>
+                    </div>
+                </Slider>
             </div>
-            </div>
+        </div>
     )
 }
 
