@@ -1,0 +1,48 @@
+.infoContainer{
+    position: relative;
+    z-index: 3;
+    margin-top: -100px;
+}
+.infoContainer h5{
+    font-family: 'Font Awesome 5 Free';
+}
+.cInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+}
+
+.cInfo p {
+    font-size: 15px;
+    text-align: center;
+}
+
+.icons{
+    color: #fff;
+    font-size: 80px;
+    background: #9413D8;
+    padding: 30px;
+    border-radius: 50%;
+}
+.icon{
+    color: #fff;
+    font-size: 80px;
+    background: #D82A13;
+    padding: 30px;
+    border-radius: 50%;
+}
+
+
+
+@media screen and (max-width:768px) {
+    .infoContainer{
+        margin-top: -90px;
+    }
+}
+@media screen and (max-width:480px) {
+    .infoContainer{
+        margin-top: -50px;
+    }
+}
