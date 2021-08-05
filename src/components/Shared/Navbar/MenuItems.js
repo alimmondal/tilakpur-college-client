@@ -1,22 +1,22 @@
 export const MenuItems = [
     {
-        title: 'Our Doctors',
-        path: '/ourDoctors',
+        title: 'Syllabus',
+        path: '/dashboard',
         cName: 'dropdowns-link'
     },
     {
-        title: 'Consulting',
-        path: '/consulting',
+        title: 'Online Routine',
+        path: '/dashboard',
         cName: 'dropdowns-link'
     },
     {
-        title: 'Prescriptions',
-        path: '/pres',
+        title: 'Class Routine',
+        path: '/dashboard',
         cName: 'dropdowns-link'
     },
     {
-        title: 'Add Doctor',
-        path: '/addDoctor',
+        title: 'Exam Routine',
+        path: '/dashboard',
         cName: 'dropdowns-link'
     },
 ]

@@ -1,0 +1,38 @@
+.callToBg{
+    background-color: #3277AE;
+}
+
+.callToBg h3{
+    color: #fff;
+    font-weight: bold;
+}
+
+.callToBtn{
+ 
+    color: #fff;
+    border: 3px solid #fff;
+    border-radius: 4px;
+    padding: 10px 20px;
+    background-color: #3277AE;
+}
+
+.callToBtn:hover{
+    background-color: #fff;
+    color: #000;
+    transition: all 0.3s ease-in-out;
+}
+
+.fa-chevron-right{
+    margin-left: 5px;
+}
+/* .fa-chevron-right:hover{
+    font-size: 15px;
+}  */
+@media screen and (max-width: 480px){
+    .callToBg h3{
+        text-align: center;
+    }
+    .callToBtn{
+        margin-left: 90px;
+    }
+}

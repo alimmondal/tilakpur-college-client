@@ -76,17 +76,31 @@ const Navbar = () => {
                             onMouseLeave={onMouseLeave}
                         >
                             <Link
+                                to='/academics'
+                                className='nav-links'
+                                onClick={closeMobileMenu}
+                            >
+                                Academics <i className='fas fa-caret-down' />
+                            </Link>
+                            {dropdown && <Dropdown />}
+                        </li>
+                        <li
+                            className='nav-item'
+                            onMouseEnter={onMouseEnter}
+                            onMouseLeave={onMouseLeave}
+                        >
+                            <Link
                                 to='/dashboard'
                                 className='nav-links'
                                 onClick={closeMobileMenu}
                             >
-                                Dashboard <i className='fas fa-caret-down' />
+                                Dashboard 
                             </Link>
-                            {dropdown && <Dropdown />}
+                            {/* {dropdown && <Dropdown />} */}
                         </li>
                         <li className='nav-item'>
                             <Link
-                                to='/blogDetail'
+                                to='/blogs'
                                 className='nav-links'
                                 onClick={closeMobileMenu}
                             >
@@ -104,7 +118,7 @@ const Navbar = () => {
                         </li>
                         <li className='nav-item'>
                             <Link
-                                to='/contactUs'
+                                to='/dashboard'
                                 className='nav-links'
                                 onClick={closeMobileMenu}
                             >

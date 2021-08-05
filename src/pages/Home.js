@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import AboutUs from '../components/Home/AboutUs/AboutUs';
+import CallToAction from '../components/Home/CallToAction/CallToAction';
 import CollegeInfo from '../components/Home/CollegeInfo/CollegeInfo';
 import HeroSection from '../components/Home/HeroSection/HeroSection';
+import Teachers from '../components/Home/OurTeacher/Teachers';
 import OurTeachers from '../components/Home/OurTeachers/OurTeachers';
 import Principal from '../components/Home/Principal/Principal';
+import Testimonial from '../components/Home/Testimonial/Testimonial';
+import Testimonal from '../components/Home/Testimonial/Testimonial';
 import Footer from '../components/Shared/Footer/Footer';
 import Navbar from '../components/Shared/Navbar/Navbar';
 // import Navbar from '../components/Navbar/Navbar';
@@ -19,13 +23,15 @@ const Home = () => {
     // }
     return (
         <div>
-            {/* <Sidebar isOpen={isOpen} toggle={toggle} /> */}
             <Navbar />
             <HeroSection></HeroSection>
             <CollegeInfo></CollegeInfo>
             <Principal></Principal>
             <AboutUs></AboutUs>
-            <OurTeachers></OurTeachers>
+            {window.innerWidth > 768 ? <OurTeachers></OurTeachers> :
+            <Teachers></Teachers>}
+            <Testimonial></Testimonial>
+            <CallToAction></CallToAction>
             <Footer></Footer>
         </div>
     );

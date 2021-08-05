@@ -25,7 +25,7 @@ a {
   background-color: #0fcfec;
   text-transform: uppercase;
   font-weight:600;
-  padding: 4px 10px;
+  padding: 14px 40px;
   border: 0px;
   border-radius: 5px;
 }
@@ -33,6 +33,7 @@ a {
 .bt-brand:hover{
   background-color: goldenrod;
   padding: 10px 30px;
+  color: #fff;
 }
 .text-brand {
   color: #1CC7C1;

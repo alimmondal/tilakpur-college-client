@@ -1,0 +1,145 @@
+/* import styled from "styled-components";
+import { Link } from "react-router-dom"; */
+
+
+.formContainer {
+        min-height : 692px;
+        background : #049C59;
+        padding-top : 80px;
+        padding-bottom: 80px;
+}
+
+
+@media screen and (max-width: 768px) {
+        .formContainer {
+                padding: 80px 0;
+                width : 100%;
+        }
+}
+
+.formWrap {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* align-items : center; */
+}
+
+@media (max-width: 480px) {
+        .FormWrap {
+                height: 30%;
+                width : 80%;
+        }
+}
+
+
+.Icon{
+        margin-top: 52px;
+        text-decoration: none;
+        color: #fff;
+        font-weight: 700;
+        font-size: 32px;
+        text-align: center;
+        padding-bottom: 52px;
+}
+
+@media screen and (max-width: 480px) {
+.Icon {
+        margin-left: 16px;
+        margin-top : 8px;
+        width      : 80%;
+}
+}
+
+
+
+.formContent{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+}
+
+@media screen and (max-width: 480px) {
+        .formContent{padding: 10px;
+        /* width:80%; */
+}
+}
+
+
+
+.forms{
+        background: #010101;
+        max-width: 400px;
+        height: auto;
+        width: 100%;
+        z-index: 1;
+        display: grid;
+        margin : 0 auto;
+        padding:80px 32px;
+        border-radius: 4px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+@media screen and (max-width: 480px) {
+     .form.{
+        padding: 32px 32px;
+        width:300px;
+}
+}
+
+
+
+ .forms h1{ 
+        margin-bottom: 40px;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 400;
+        text-align: center;
+}
+
+/* label{
+         margin-bottom: 8px;
+        font-size:14px;
+        color: #fff;
+} */
+
+.forms input {
+        padding: 16px 0px;
+        margin-bottom: 32px;
+        border : none;
+        border-radius: 4px;
+        color : #000;
+        font-size : 20px;
+        cursor : pointer;
+}
+
+
+.formButton {
+        background: #01bf71;
+        padding:16px 70px;
+        border: none;
+        border-radius: 4px;
+        color : #fff;
+        font-size : 20px;
+        margin: 0 50px;
+}
+
+@media screen and (max-width:480px) {
+        .formButton {
+        padding:16px 33px;
+        }
+}
+
+.signUp{
+        color: #fff;
+}
+.signUp:hover{
+        color: red;
+}
+ .Text{
+         text-align: center;
+        margin-top:24px;
+        color: #fff;
+        font-size: 17px;
+}

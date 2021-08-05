@@ -9,6 +9,9 @@
     z-index: 1;
 }
 
+.heroIcon{
+    font-size: 60px;
+}
 .heroBg{
     position: absolute;
     top: 0;
@@ -133,6 +136,9 @@ svg{
 @media screen and (max-width:480px){
     .heroContainer{
         height: 350px;
+    }
+    .heroIcon{
+        font-size: 40px;
     }
     .heroBg{
         width: 100%;

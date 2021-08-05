@@ -2,7 +2,7 @@
 import React from 'react';
 import Icon1 from '../../../images/college.jpg'
 import { FaFacebook, FaInstagram, FaYoutube, FaTwitter, FaLinkedin } from 'react-icons/fa'
-import { FooterContainer, FooterWrap, FooterLinksContainer, FooterLinksWrapper, FooterLinkItems, FooterLinkTitle, FooterLink, SocialMedia, SocialMediaWrap, WebsiteRights, SocialIcons, SocialLogo, SocialIconLink, ServicesIcon, FooterP } from './FooterElements';
+import { FooterContainer, FooterWrap, FooterLinksContainer, FooterLinksWrapper, FooterLinkItems, FooterLinkTitle, FooterLink, SocialMedia, SocialMediaWrap, WebsiteRights, SocialIcons, SocialLogo, SocialIconLink, IconWrapper, ServicesIcon, FooterP } from './FooterElements';
 import { animateScroll as scroll } from 'react-scroll';
 
 const Footer = () => {
@@ -16,10 +16,17 @@ const Footer = () => {
             <FooterWrap>
                 <FooterLinksContainer>
                     <FooterLinksWrapper>
+                        <IconWrapper>
+                            <ServicesIcon src={Icon1} />
+                                <FooterP>
+                                We give students an education and experiences that set them up for success in a career and become successfull
+                                </FooterP>
+                        </IconWrapper>
+
                         <FooterLinkItems>
                             {/* <FooterLinkTitle>About us</FooterLinkTitle> */}
-                            <ServicesIcon src={Icon1} />
-                            <FooterP>We give students an education and experiences that set them up for success in a career and become successfull.</FooterP>
+
+                            {/* <FooterP>We give students an education and experiences that set them up for success in a career and become successfull.</FooterP> */}
 
                             {/* <FooterLink to="/signin">Testimonials</FooterLink>
                                 <FooterLink to="/signin">Careers</FooterLink>
@@ -35,10 +42,10 @@ const Footer = () => {
                                 <br /><i class="fas fa-phone me-1"></i>
                                 +8801913084709
                             </FooterLink>
-                            <FooterLink to="/#">Email:</FooterLink>
+                            <FooterLink to="/#"></FooterLink>
                             <FooterLink to="/#">
-                                {/* <i class="far fa-envelope me-1 text-center"></i> <br /> */}
-                                collegetilakpur@gmail.com
+                                <i class="far fa-envelope me-1 text-center"></i> <br />
+                                collegetilakpur@gmail.com 
                             </FooterLink>
                             <FooterLink to="/#">Clerk:</FooterLink>
                             <FooterLink to="/#">
@@ -61,11 +68,11 @@ const Footer = () => {
                         <FooterLinkItems>
                             <FooterLinkTitle>Syllabus</FooterLinkTitle>
                             <FooterLink to="/">English</FooterLink>
-                            <FooterLink to="/signin">Bengali</FooterLink>
-                            <FooterLink to="/signin">ICT</FooterLink>
-                            <FooterLink to="/signin">Humanity/ arts</FooterLink>
-                            <FooterLink to="/signin">Science</FooterLink>
-                            <FooterLink to="/signin">Commerce</FooterLink>
+                            <FooterLink to="/">Bengali</FooterLink>
+                            <FooterLink to="/">ICT</FooterLink>
+                            <FooterLink to="/">Humanity/ arts</FooterLink>
+                            <FooterLink to="/">Science</FooterLink>
+                            <FooterLink to="/">Commerce</FooterLink>
                         </FooterLinkItems>
                     </FooterLinksWrapper>
                 </FooterLinksContainer>

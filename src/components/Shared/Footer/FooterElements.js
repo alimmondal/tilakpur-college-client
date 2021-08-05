@@ -27,19 +27,25 @@ export const FooterLinksContainer = styled.div`
 
 export const FooterLinksWrapper = styled.div`
     display: flex;
+    justify-content: center;
+    // align-items: center;
 
     @media screen and (max-width: 820px){
+        display: flex;
         flex-direction: column;
+        // justify-content: space-evenly;
+        // align-items: center;
+        padding-left: 42px;        
     }
 `;
 
 export const FooterLinkItems = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: center;
-    // margin: 16px;
-    // text-align: start;
-    width: 300px;
+    // align-items: center;
+    margin:16px;
+    text-align: start;
+    width: 200px;
     box-sizing: border-box;
     color: #fff;
 
@@ -68,7 +74,8 @@ export const FooterLink = styled(Link)`
     text-direction: none;
     margin-bottom: 0.5rem;
     font-size: 13px;
-    text-align: start;
+    text-align: justify;
+    
 
     &:hover {
         color: #01bf71;
@@ -126,18 +133,35 @@ export const SocialIconLink = styled.a`
     color: #fff;
     font-size: 24px;
 `;
+
+
+
+export const IconWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    // justify-content: center
+    align-items: center;
+    justify-content: center;
+    margin-left: 90px;
+
+    @media screen and (max-width: 768px){
+        margin-left: auto;
+    }
+`;
+
 export const ServicesIcon = styled.img`
     height: 90px;
     width: 130px;
     // margin-bottom: 10px;
     border-radius: 50%;
+    // text-align: center;
 
 
 `;
 export const FooterP = styled.p`
     text-align: center;
     font-size: 12px;
-
+    color: #fff;
     @media screen and (max-width: 480px){
         text-align: start;
     }

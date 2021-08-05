@@ -21,7 +21,7 @@ const HeroSection = () => {
                     <video className="videoBg" src={video} autoPlay loop muted type="video/mp4" />
                 </div>
                 <div className="heroContent">
-                    <i class="fas fa-book-reader text-white fs-5"></i>
+                   <p><i style={{color:''}} class="fa fa-book-reader heroIcon"></i></p> 
                     <h1>Wellcom to <br /> Tilakpur Degree College</h1>
                     <p>we aim at creating real talents</p>
                     <div className="heroBtnWrapper">

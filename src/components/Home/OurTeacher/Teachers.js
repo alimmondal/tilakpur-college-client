@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 // import './OurTeachers.css';
-import './OurTeachers.scss';
+import './Teachers.scss';
 import teacher1 from '../../../images/image1.png';
 import teacher2 from '../../../images/principal.png';
 import teacher3 from '../../../images/image4.png';
@@ -16,16 +16,17 @@ import "slick-carousel/slick/slick-theme.css";
 
 
 
-const OurTeachers = () => {
+const Teachers = () => {
+
 
     let settings = {
         dots: true,
         infinite: true,
-        slidesToShow: 4,
+        slidesToShow: 3,
         slidesToScroll: 1,
         cssEase: "linear",
-        className: "center",
-        centerMode: true,
+        // className: "center",
+        // centerMode: true,
         // centerPadding: "60px",
         // speed: 500,
         // autoplay: true,
@@ -33,12 +34,16 @@ const OurTeachers = () => {
         // autoplaySpeed: 2000,
         // pauseOnHover: true,
         // focusOnSelect: true,
+
+
+
     }
+
 
     return (
         <div className="boddy">
             <div className="container carousel">
-                <h1 className="fw-bold py-2"> Our Teacher</h1>
+                <h1 className="text-white fw-bold py-3"> Our Teachers</h1>
                 <Slider {...settings} >
                     <div className="card-wrapper">
                         <div className="card">
@@ -123,7 +128,7 @@ const OurTeachers = () => {
                     <div className="card-wrapper">
                         <div className="card">
                             <div className="card-image">
-                                <img src={teacher3} alt="" />
+                                <img src={teacher6} alt="" />
                             </div>
                             <ul className="social-icons">
                                 <li><a href="#"><i className="fab fa-facebook"></i> </a></li>
@@ -143,6 +148,6 @@ const OurTeachers = () => {
 }
 
 
-export default OurTeachers;
+export default Teachers;
 
 

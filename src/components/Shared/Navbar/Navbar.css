@@ -31,7 +31,7 @@
     max-width: 1500px;
   }
   .navbar-logo {
-    color: #01BF71;
+    color: #fff;
     justify-self: start;
     margin-left: 20px;
     cursor: pointer;
@@ -41,17 +41,17 @@
   }
 
   .navbar-logo:hover {
-    color: #fff;
+    color: goldenrod;
   }
   
-  .fa-firstdraft {
+  /* .fa-firstdraft {
     margin-left: 0.5rem;
     font-size: 1.6rem;
   }
-  
+   */
   .nav-menu {
     display: grid;
-    grid-template-columns: repeat(6, auto);
+    grid-template-columns: repeat(7, auto);
     /* grid-gap: 5px; */
     list-style: none;
     text-align: center;
@@ -68,17 +68,20 @@
   }
   
   .nav-links {
-    color: goldenrod;
+    color: #fff;
     text-decoration: none;
-    padding: 0.5rem 0.5rem;
-
+    padding: 0.5rem 0.4rem;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+    font-weight: bold;
   }
   
   .nav-links:hover {
+    color: tomato;
     /* background-color: #1888ff; */
-    color:#fff;
-    border-radius: 4px;
-    transition: all 0.3s ease-out;
+    border-bottom: 3px solid red;
+    /* border-radius: 4px; */
+    transition: all 0.3s ease-in-out;
   }
   
   .fa-bars {
