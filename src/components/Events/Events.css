@@ -1,0 +1,52 @@
+.eventHero {
+  background-image: url(../../images/college2.jpg);
+  background-repeat: no-repeat;
+  height: 350px;
+  background-attachment: fixed;
+  background-position: center;
+  object-fit: cover;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.eventHero h1 {
+  background-color: green;
+  font-weight: 700;
+  padding: 10px;
+  border-radius: 3px;
+  color: #fff;
+  width: max-content;
+}
+.testRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.testRow h4 {
+  font-size: normal;
+}
+.testRow p,
+a {
+  font-size: normal;
+}
+
+@media screen and (max-width: 768px) {
+  .testRow h4 {
+    font-size: 15px;
+    text-align: justify;
+    margin-top: 10px;
+  }
+  .testRow p,
+  a {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .testRow {
+    display: grid;
+    grid-gap: 10px;
+  }
+}

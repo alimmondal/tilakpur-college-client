@@ -1,0 +1,32 @@
+.title {
+  margin: 0 50px;
+}
+
+.descDiv {
+  width: 100vw;
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: space-evenly; */
+  margin: 50px;
+}
+
+@media screen and(max-width: 480px) {
+  .descDiv {
+    margin: 10px;
+  }
+}
+
+.pDiv {
+  width: 89%;
+}
+.imgDiv {
+  overflow: hidden;
+  /* height: 10%; */
+  /* width: 20%; */
+}
+
+.devided {
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: space-between; */
+}

@@ -1,33 +1,23 @@
 import React from 'react';
+import '../components/Events/Events.css';
+import Events from '../components/Events/Events';
 import Navbar from '../components/Shared/Navbar/Navbar';
 
 const BlogPage = () => {
+  return (
+    <div>
+      <div className="pt-4 pb-5 bg-primary">
+        <Navbar />
+      </div>
 
-    const blogPageStyles = {
-        height: '100vh',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#0fcfec',
-        fontWeight: '700',
-        textAlign: 'center',
-        color: '#fff'
-    }
-    return (
-        <div style={blogPageStyles} className="bg-primary">
-            <Navbar />
-            <div className="container-fluid">
-                <div className="container">
-                    <div className="row">
-                        <h1>
-                            Blogs/News/Media is coming..................
-                        </h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
+      <div className="eventHero">
+        <h1 className=" ">College News</h1>
+      </div>
+      <div className="">
+        <Events />
+      </div>
+    </div>
+  );
 };
 
 export default BlogPage;

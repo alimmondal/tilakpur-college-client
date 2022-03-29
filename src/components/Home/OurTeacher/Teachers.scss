@@ -1,353 +1,352 @@
-*{
-    margin: 0;
-    padding: 0;
-} 
+* {
+  margin: 0;
+  padding: 0;
+}
 
 .boddy {
-    display: block;
-    width: 100%;
-    height: 77vh;
-    overflow: hidden;
-    position: relative;
-    background: lightgrey;
-    margin-bottom: 5px;
-} 
+  display: block;
+  width: 100%;
+  height: 77vh;
+  overflow: hidden;
+  position: relative;
+  background: lightgrey;
+  margin-bottom: 5px;
+}
 
 .card-wrapper {
-    position: relative;
-    width: 100%;
-    padding: 0 10px;
-    box-sizing: border-box;
-    &:active,&:hover,&:focus {
-        outline: none;
-        border: none;
-    }
+  position: relative;
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+  &:active,
+  &:hover,
+  &:focus {
+    outline: none;
+    border: none;
+  }
 }
 
-.card{
-    width: 250px;
-    height: 300px;
-    border-radius: 16px;
-    overflow: hidden;
-    cursor: pointer;
-    position: relative;
-    .card-image{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 2;//2
-        background-color: #000;
-        transition: .5s;
-        img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }//card-image
-
-    &:hover{
-        img{
-            opacity: .4;
-            transition: .5s;
-        }
-        .card-image{
-            transform: translateY(-100px);
-            transition:all .9s;
-        }
-    }
-}//card
-
-.social-icons{
+.card {
+  width: 250px;
+  height: 300px;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  .card-image {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-57%, -50%);
-    z-index: 3;
-    display: flex;
-    li{
-        list-style: none;
-        a{
-            position: relative;
-            display: block;
-            width: 50px;
-            height: 50px;
-            line-height: 50px;
-            text-align: center;
-            background: #fff;
-            font-size: 23px;
-            color: #333;
-            font-weight: bold;
-            margin: 0 6px;
-            transition: .4s;
-            transform: translateY(200px);
-            opacity: 0;
-        }
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2; //2
+    background-color: #000;
+    transition: 0.5s;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
+  } //card-image
 
-   
-}//social-icons
-
-.card:hover{
-    .social-icons li a{
-        transform: translateY(0px);
-        opacity: 1;
-    }  
-}
-
-.social-icons li a:hover{
-    background: #000;
-    transition: .2s;
-    .fab{
-        color: #fff;
+  &:hover {
+    img {
+      opacity: 0.4;
+      transition: 0.5s;
     }
-}
-
-.social-icons li a .fab{
-    transition: .8s;
-    &:hover{
-        transform: rotateY(360deg);
-        color: #fff;
+    .card-image {
+      transform: translateY(-100px);
+      transition: all 0.9s;
     }
+  }
+} //card
+
+.social-icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-57%, -50%);
+  z-index: 3;
+  display: flex;
+  li {
+    list-style: none;
+    a {
+      position: relative;
+      display: block;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      background: #fff;
+      font-size: 23px;
+      color: #333;
+      font-weight: bold;
+      margin: 0 6px;
+      transition: 0.4s;
+      transform: translateY(200px);
+      opacity: 0;
+    }
+  }
+} //social-icons
+
+.card:hover {
+  .social-icons li a {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
 
-.card:hover li:nth-child(1) a{
-    transition-delay: .1s;
+.social-icons li a:hover {
+  background: #000;
+  transition: 0.2s;
+  .fab {
+    color: #fff;
+  }
 }
-.card:hover li:nth-child(2) a{
-    transition-delay: .2s;
+
+.social-icons li a .fab {
+  transition: 0.8s;
+  &:hover {
+    transform: rotateY(360deg);
+    color: #fff;
+  }
 }
-.card:hover li:nth-child(3) a{
-    transition-delay: .3s;
+
+.card:hover li:nth-child(1) a {
+  transition-delay: 0.1s;
 }
-.card:hover li:nth-child(4) a{
-    transition-delay: .4s;
+.card:hover li:nth-child(2) a {
+  transition-delay: 0.2s;
+}
+.card:hover li:nth-child(3) a {
+  transition-delay: 0.3s;
+}
+.card:hover li:nth-child(4) a {
+  transition-delay: 0.4s;
 }
 
 .details {
-    position: absolute;
-    bottom: 400px;
-    left: 0;
-    background: #fff;
+  position: absolute;
+  bottom: 400px;
+  left: 0;
+  background: #fff;
+  width: 100%;
+  height: 120px;
+  z-index: 1;
+  padding: 10px;
+  transition: 0.6s;
+  h2 {
+    margin: 30px 0;
+    padding: 0;
+    text-align: center;
+    .job-title {
+      font-size: 16px;
+      line-height: 2;
+      color: #333;
+      font-weight: 300;
+      display: block;
+    }
+  }
+}
+
+.card:hover {
+  .details {
+    bottom: 0;
+  }
+}
+
+.carousel {
+  .slick-dots {
+    bottom: -2.5vw;
+    li {
+      button {
+        width: 20px;
+        height: 20px;
+        border: 1px solid #fff;
+        border-radius: 20px;
+        &:before {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 10px;
+          height: 10px;
+          border-radius: 10px;
+          content: '';
+          text-align: center;
+          opacity: 0.5;
+          color: #000;
+          background-color: #fff;
+          transform: translate(-50%, -50%);
+          transition: all 0.3s ease-in-out;
+        }
+      }
+      &.slick-active,
+      &:hover {
+        button {
+          border-color: tomato;
+          &:before {
+            background-color: tomato;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .slick-prev,
+  .slick-next {
+    width: 50px;
+    height: 50px;
+    background-color: #fff !important;
+  }
+  .slick-prev:hover,
+  .slick-prev:focus,
+  .slick-next:hover,
+  .slick-next:focus {
+    color: #fff !important;
+    outline: none;
+    background: #fff !important;
+  }
+  .slick-prev:before,
+  .slick-next:before {
+    color: #000 !important;
+    font-family: cursive;
+  }
+  .slick-prev {
+    left: -65px !important;
+  }
+  .slick-next {
+    right: -65px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .boddy {
+    display: block;
     width: 100%;
-    height: 120px;
+    height: 53vh;
+    background-color: #333;
+  }
+  .card {
+    width: 100%;
+    height: 160px;
+
+    &:hover {
+      img {
+        opacity: 0.4;
+        transition: 0.5s;
+      }
+      .card-image {
+        transform: translateY(-37px);
+        transition: all 0.9s;
+      }
+    }
+  }
+
+  .social-icons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-64%, -50%);
+  }
+  .social-icons li a {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 19px;
+    margin: 0 1px;
+    text-align: center;
+    //  margin:2px 0;
+  }
+
+  .carousel {
+    .slick-dots {
+      bottom: -5vw;
+    }
+  }
+
+  .details {
+    width: 100%;
+    height: 65px;
     z-index: 1;
     padding: 10px;
-    transition: .6s;
-    h2{
-        margin: 30px 0;
-        padding: 0;
-        text-align: center;
-        .job-title {
-            font-size: 16px;
-            line-height: 2;
-            color: #333;
-            font-weight: 300;
-            display: block;
-        }
+    h2 {
+      font-size: 13px;
+      margin: 20px 0;
+      padding: 0;
+      text-align: center;
+      .job-title {
+        font-size: 10px;
+        line-height: 1;
+        color: #333;
+        // font-weight: 300;
+        // display: block;
+      }
     }
+  }
 }
 
-.card:hover{
-    .details{
-        bottom: 0;
+@media screen and (max-width: 480px) {
+  .boddy {
+    display: block;
+    width: 100%;
+    height: 45vh;
+    // height: auto;
+  }
+
+  .card-wrapper {
+    padding: 0 1px;
+  }
+  .card {
+    width: 100%;
+    height: 150px;
+
+    &:hover {
+      img {
+        opacity: 0.4;
+        transition: 0.5s;
+      }
+      .card-image {
+        transform: translateY(-45px);
+        transition: all 0.9s;
+      }
     }
+  }
+  .social-icons {
+    transform: translate(-64%, -50%);
+  }
+  .social-icons li a {
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    font-size: 17px;
+    margin: 0 1px;
+    text-align: center;
+    //  margin:2px 0;
+  }
+
+  .carousel {
+    .slick-dots {
+      bottom: -7vw;
+    }
+  }
+
+  .details {
+    width: 100%;
+    height: 72px;
+    z-index: 1;
+    // padding: 10px;
+    // transition: .6s;
+    h2 {
+      font-size: 14px;
+      margin: 20px 0;
+      padding: 0;
+      text-align: center;
+      .job-title {
+        font-size: 11px;
+        line-height: 1.5;
+        color: #333;
+      }
+    }
+  }
 }
-
-.carousel{
-    .slick-dots{
-        bottom: -2.5vw;
-        li{
-            button{
-                width: 20px;
-                height: 20px;
-                border: 1px solid #fff;
-                border-radius: 20px;
-                &:before{
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    width: 10px;
-                    height: 10px;
-                    border-radius: 10px;
-                    content: "";
-                    text-align: center;
-                    opacity: .5;
-                    color: #000;
-                    background-color: #fff;
-                    transform: translate(-50%, -50%);
-                    transition: all .3s ease-in-out;
-
-                }
-            }
-            &.slick-active,
-            &:hover{
-                button{
-                    border-color: tomato;
-                    &:before{
-                        background-color: tomato;
-                        opacity: 1;
-                    }
-                }
-            }
-        }
-    }
-
-
-    .slick-prev, .slick-next{
-        width: 50px;
-        height: 50px;
-        background-color: #fff !important;
-    }
-    .slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus{
-        color: #fff !important;
-        outline: none;
-        background: #fff !important;
-    }
-    .slick-prev:before, .slick-next:before {
-        color:#000 !important;
-        font-family: cursive;
-    }
-    .slick-prev{
-        left: -65px !important;
-    }
-    .slick-next{
-        right: -65px !important;
-    }
-    
-}
-
-@media screen and (max-width: 768px){
-    .boddy {
-        display: block;
-        width: 100%;
-        height: 53vh;
-        background-color: #333
-    }
-    .card{
-        width: 100%;
-        height: 160px;
-
-        &:hover{
-            img{
-                opacity: .4;
-                transition: .5s;
-            }
-            .card-image{
-                transform: translateY(-37px);
-                transition:all .9s;
-            }
-        }
-    }
-
-    .social-icons{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-64%, -50%);
-    }
-    .social-icons li a {
-         width:30px;
-         height: 30px; 
-         line-height: 30px;
-         font-size: 19px;
-         margin: 0 1px;
-         text-align: center;
-        //  margin:2px 0;
-     }
-    
-     .carousel{
-        .slick-dots{
-            bottom: -5vw;
-        }
-    }
-
-     .details {
-        width: 100%;
-        height: 65px;
-        z-index: 1;
-        padding: 10px;
-        h2{
-            font-size: 13px;
-            margin: 20px 0;
-            padding: 0;
-            text-align: center;
-            .job-title {
-                font-size:10px;
-                line-height: 1;
-                color: #333;
-                // font-weight: 300;
-                // display: block;
-            }
-        }
-    }
- }
-
-
-@media screen and (max-width: 480px){
-    .boddy {
-        display: block;
-        width: 100%;
-        height: 45vh;
-        // height: auto;
-    }
-
-    .card-wrapper{
-        padding: 0 1px;
-    }
-    .card{
-        width: 100%;
-        height: 150px;
-
-        &:hover{
-            img{
-                opacity: .4;
-                transition: .5s;
-            }
-            .card-image{
-                transform: translateY(-45px);
-                transition:all .9s;
-            }
-        }
-    }
-    .social-icons{
-        transform: translate(-64%, -50%);
-    }
-    .social-icons li a {
-         width:22px;
-         height: 22px; 
-         line-height: 22px;
-         font-size: 17px;
-         margin: 0 1px;
-         text-align: center;
-        //  margin:2px 0;
-     }
-
-     .carousel{
-        .slick-dots{
-            bottom: -7vw;
-        }
-    }
-
-     .details {
-        width: 100%;
-        height: 72px;
-        z-index: 1;
-        // padding: 10px;
-        // transition: .6s;
-        h2{
-            font-size: 14px;
-            margin: 20px 0;
-            padding: 0;
-            text-align: center;
-            .job-title {
-                font-size:11px;
-                line-height: 1.5;
-                color: #333;
-            }
-        }
-    }
-    
- }
-

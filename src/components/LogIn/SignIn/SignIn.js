@@ -2,18 +2,15 @@ import React, { useContext, useState } from 'react';
 import './SignIn.css';
 import { Link } from 'react-router-dom';
 
-
-import firebase from "firebase/app";
-import "firebase/auth";
+import firebase from 'firebase/app';
+import 'firebase/auth';
 import { UserContext } from '../../../App';
-import { useHistory, useLocation } from 'react-router-dom';
-// import LoginBg from '../../../images/loginBg.png';
+import { useNavigate, useLocation } from 'react-router-dom';
+
 import firebaseConfig from '../firebase.config';
-// import { Link } from "react-router-dom";
 
 const SignIn = () => {
-
-  document.title = "login";
+  document.title = 'login';
   const [user, setUser] = useState({
     isSignedIn: false,
     name: '',
@@ -23,9 +20,10 @@ const SignIn = () => {
   });
 
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-  const history = useHistory();
+  const navigate = useNavigate();
+
   const location = useLocation();
-  const { from } = location.state || { from: { pathname: "/dashboard" } };
+  const { from } = location.state || { from: { pathname: '/dashboard' } };
 
   if (firebase.apps.length === 0) {
     firebase.initializeApp(firebaseConfig);
@@ -33,32 +31,40 @@ const SignIn = () => {
 
   const handleGoogleSignIn = () => {
     var provider = new firebase.auth.GoogleAuthProvider();
-    firebase.auth().signInWithPopup(provider).then(function (result) {
-      const { displayName, email } = result.user;
-      const signedInUser = { name: displayName, email }
-      setLoggedInUser(signedInUser);
-      storeAuthToken();
-    }).catch(function (error) {
-      const errorMessage = error.message;
-      console.log(errorMessage);
-    });
-  }
+    firebase
+      .auth()
+      .signInWithPopup(provider)
+      .then(function (result) {
+        const { displayName, email } = result.user;
+        const signedInUser = { name: displayName, email };
+        setLoggedInUser(signedInUser);
+        storeAuthToken();
+      })
+      .catch(function (error) {
+        const errorMessage = error.message;
+        console.log(errorMessage);
+      });
+  };
 
   const storeAuthToken = () => {
-    firebase.auth().currentUser.getIdToken(/* forceRefresh */ true)
+    firebase
+      .auth()
+      .currentUser.getIdToken(/* forceRefresh */ true)
       .then(function (idToken) {
         sessionStorage.setItem('token', idToken);
-        history.replace(from);
-      }).catch(function (error) {
+        navigate.replace(from);
+      })
+      .catch(function (error) {
         // Handle error
       });
-  }
-
+  };
 
   //google sign out
   const handleGoogleSignOut = () => {
-    firebase.auth().signOut()
-      .then(res => {
+    firebase
+      .auth()
+      .signOut()
+      .then((res) => {
         const signedOutUser = {
           isSignedIn: false,
           name: '',
@@ -66,19 +72,19 @@ const SignIn = () => {
           photo: '',
           error: '',
           success: '',
-        }
+        };
         setUser(signedOutUser);
         console.log(res);
-      }).catch((error) => {
+      })
+      .catch((error) => {
         console.log(error);
       });
-  }
-
+  };
 
   //created user with email and password
   const handleBlur = (event) => {
     let isFieldValid = true;
-    console.log(event.target.name, event.target.value)
+    console.log(event.target.name, event.target.value);
     if (event.target.name === 'email') {
       isFieldValid = /\S+@\S+\.\S+/.test(event.target.value);
     }
@@ -92,23 +98,23 @@ const SignIn = () => {
       newUserInfo[event.target.name] = event.target.value;
       setUser(newUserInfo);
     }
-
-  }
-
+  };
 
   const handleSubmit = (e) => {
     console.log(user.email, user.password);
 
     if (user.email && user.password) {
-      firebase.auth().signInWithEmailAndPassword(user.email, user.password)
+      firebase
+        .auth()
+        .signInWithEmailAndPassword(user.email, user.password)
         .then((res) => {
           const newUserInfo = { ...user };
           newUserInfo.error = '';
           newUserInfo.success = true;
           setUser(newUserInfo);
           setLoggedInUser(newUserInfo);
-          history.replace(from);
-          console.log(res.user)
+          navigate.replace(from);
+          console.log(res.user);
         })
         .catch((error) => {
           const newUserInfo = { ...user };
@@ -118,16 +124,14 @@ const SignIn = () => {
         });
     }
     e.preventDefault();
-  }
-
+  };
 
   return (
-    < div className="formContainer">
+    <div className="formContainer">
       <div className="formWrap" FormWrap>
         <Link to="/">
-          <div className="Icon" >tCollege</div>
+          <div className="Icon">tCollege</div>
         </Link>
-
 
         <div className="formContent">
           {/* <p className="text-white">Show Email: {user.email} </p>
@@ -135,32 +139,68 @@ const SignIn = () => {
           <form onSubmit={handleSubmit} action="#" className="forms">
             <h1>Sign in to your account</h1>
             <p className="text-white">Show Password: {user.password}</p>
-            <input type="email" onBlur={handleBlur} name="email" placeholder="your email address" id="" required className="form-control" />
+            <input
+              type="email"
+              onBlur={handleBlur}
+              name="email"
+              placeholder="your email address"
+              id=""
+              required
+              className="form-control"
+            />
             <br />
-            <input type="password" onBlur={handleBlur} name="password" placeholder="Password" id="" required className="form-control" />
+            <input
+              type="password"
+              onBlur={handleBlur}
+              name="password"
+              placeholder="Password"
+              id=""
+              required
+              className="form-control"
+            />
 
             <div className="form-group">
-              <label htmlFor="" className=""><h6 className="Text">Forgot Password?</h6></label>
+              <label htmlFor="" className="">
+                <h6 className="Text">Forgot Password?</h6>
+              </label>
             </div>
             <div className="form-group">
-              <button type="submit" className="formButton"><i class="fas fa-sign-in-alt me-2 text-white"></i>Sign In</button>
+              <button type="submit" className="formButton">
+                <i class="fas fa-sign-in-alt me-2 text-white"></i>Sign In
+              </button>
             </div>
 
             <Link to="/signUpPage">
-            <h5 className=" mt-4 signUp">Don't have an account? sign up </h5>
-          </Link>
+              <h5 className=" mt-4 signUp">Don't have an account? sign up </h5>
+            </Link>
           </form>
 
-          
-
-          <p style={{ color: 'red', background: '#fff', textAlign: 'center', marginTop:'20px', }}>{user.error}</p>
-          {
-            user.success && <p style={{ color: 'white' , textAlign: 'center' }}>User logged in successfully</p>
-          }
+          <p
+            style={{
+              color: 'red',
+              background: '#fff',
+              textAlign: 'center',
+              marginTop: '20px',
+            }}
+          >
+            {user.error}
+          </p>
+          {user.success && (
+            <p style={{ color: 'white', textAlign: 'center' }}>
+              User logged in successfully
+            </p>
+          )}
 
           <div className="text-center mt-3 text-white">
             <h6>Easy login</h6>
-            {user.isSignedIn ? <button onClick={handleGoogleSignOut}>Sign Out</button> : <button className="bt-brand" onClick={handleGoogleSignIn}><i class="fab fa-google text-white  p-2 me-2 App-logo" />Sign In With Google</button>}
+            {user.isSignedIn ? (
+              <button onClick={handleGoogleSignOut}>Sign Out</button>
+            ) : (
+              <button className="bt-brand" onClick={handleGoogleSignIn}>
+                <i class="fab fa-google text-white  p-2 me-2 App-logo" />
+                Sign In With Google
+              </button>
+            )}
           </div>
         </div>
       </div>
